@@ -6,4 +6,4 @@ CS: Test, test!
 
 Karl: Gundam King
 
-Simon: Look jack im flying
+Simon: please. i have a family
