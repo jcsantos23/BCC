@@ -3,12 +3,21 @@
 }
 
 .left-panel {
+	border-style: ridge;
+	border-color: #98AFC7;
 	float: left;
 	width: 48%;
 }
 
 .right-panel {
+	border-style: ridge;
+	border-color: #98AFC7;
 	float: right;
 	width: 48%;	
 	
+}
+
+.table-left-game, .table-right-game {
+	width: 100%;
+	text-align: center;
 }
