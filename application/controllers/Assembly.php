@@ -1,15 +1,11 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Assembly extends CI_Controller {
+class Assembly extends Application {
 
-	/**
-	 * Bot assembly page for the currently logged in user
-         * 
-	 */
-	public function index()
-	{
-                //Calls for the assembly view
-		$this->load->view('assembly');
-	}
+    public function index() {
+        $this->data['pagebody'] = 'assembly';
+        $this->render();
+    }
 }

@@ -1,16 +1,11 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Portfolio extends CI_Controller {
+class Portfolio extends Application {
 
-	/**
-	 * Player Portfolio page that tabs recent trading activity and
-         * current holdings for a specific player
-         * 
-	 */
-	public function index()
-	{
-                //Calls for the portfolio view
-		$this->load->view('portfolio');
-	}
+    public function index() {
+        $this->data['pagebody'] = 'portfolio';
+        $this->render();
+    }
 }
