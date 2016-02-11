@@ -18,3 +18,4 @@ MM/DD/YY @ HH:MM - Description of change - (Initials)
 02/09/16 @ 14:00 - Created MY_Controller inside core folder - (CS)
 
 02/09/16 @ 14:00 - Created Collections model - (CS)
+02/11/16 @ 12:13 - Database.php phpmyadmin config, autoload.php libraries
