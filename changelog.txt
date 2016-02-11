@@ -1,4 +1,20 @@
 Template
 MM/DD/YY @ HH:MM - Description of change - (Initials)
 
-02/04/16 @ 14:43 - Added CodeIgniter Framework
+-------------------------------------------------------------------
+
+02/04/16 @ 14:43 - Added CodeIgniter Framework - (CS)
+
+02/07/16 @ 13:00 - Added mock up Home/Portfolio/Assembly html files - (CS)
+02/07/16 @ 13:00 - Added css files - (CS)
+
+02/09/16 @ 14:00 - Created common_helper file - (CS)
+02/09/16 @ 14:00 - Added .htaccess file - (CS)
+02/09/16 @ 14:00 - Modified autoload file - (CS)
+02/09/16 @ 14:00 - Fixed system3 path - (CS)
+02/09/16 @ 14:00 - Created Welcome/Portfolio/Assembly Controllers - (CS)
+02/09/16 @ 14:00 - Converted html files to welcome/portfolio/assembly php files - (CS)
+02/09/16 @ 14:00 - Set up a template master view - (CS)
+02/09/16 @ 14:00 - Created MY_Controller inside core folder - (CS)
+
+02/09/16 @ 14:00 - Created Collections model - (CS)
