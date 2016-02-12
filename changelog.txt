@@ -18,5 +18,11 @@ MM/DD/YY @ HH:MM - Description of change - (Initials)
 02/09/16 @ 14:00 - Created MY_Controller inside core folder - (CS)
 
 02/09/16 @ 14:00 - Created Collections model - (CS)
+
 02/11/16 @ 14:13 - Database.php phpmyadmin config, autoload.php libraries (KLW)
 02/11/16 @ 14:39 - GIT ignored personal database.php... (KLW)
+02/11/16 @ 14:39 - Added MY_Model.php from jedi-academy/starter-jimsjoint (CS)
+02/11/16 @ 14:39 - Modified autoload.php, Collections.php, Assembly.php (CS)
+02/11/16 @ 19:58 - Created cell.php to handle images (CS)
+02/11/16 @ 20:20 - Modified Assembly controller and assembly view (CS)
+02/11/16 @ 20:22 - Modified css to make img responsive (CS)
