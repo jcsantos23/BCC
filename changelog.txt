@@ -37,4 +37,6 @@ MM/DD/YY @ HH:MM - Description of change - (Initials)
 02/13/16 @ 12:15 - Fixed model parameters - (CS)
 02/13/16 @ 12:22 - Modified autoload.php to autoload previously created models - (CS)
 02/13/16 @ 12:25 - Modified ln28 in Assembly.php controller
+02/13/16 @ 12:25 - Modified assembly.php view
 02/13/16 @ 13:32 - Modified welcome.php view
+02/13/16 @ 13:43 - Modified Collection.php model
