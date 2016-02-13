@@ -27,3 +27,8 @@ MM/DD/YY @ HH:MM - Description of change - (Initials)
 02/11/16 @ 19:58 - Created cell.php to handle images (CS)
 02/11/16 @ 20:20 - Modified Assembly controller and assembly view (CS)
 02/11/16 @ 20:22 - Modified css to make img responsive (CS)
+
+02/12/16 @ 16:15 - Created Codes.php model - (JL)
+02/12/16 @ 16:16 - Created Players.php model - (JL)
+02/12/16 @ 16:16 - Created Series.php model - (JL)
+02/12/16 @ 16:17 - Created Transactions.php model - (JL)
