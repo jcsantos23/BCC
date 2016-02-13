@@ -25,7 +25,7 @@ class Assembly extends Application {
 
         //finally! generate the table
         $rows = $this->table->make_columns($cells, 3);
-        $this->data['thetable'] = $this->table->generate($rows);
+        $this->data['atable'] = $this->table->generate($rows);
         
         $this->data['pagebody'] = 'assembly';
         $this->render();

@@ -1,1 +1,1 @@
-{thetable}
+{atable}
