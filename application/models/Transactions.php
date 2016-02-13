@@ -14,6 +14,6 @@
 class Transactions extends MY_Model{
     function __construct() {
         //parameter: 'tableName','orderByTableColumn
-        parent::__construct('transactions','DateTime');
+        parent::__construct('transactions','Player');
     }
 }
