@@ -21,5 +21,3 @@
         <?php echo form_close(); ?>
     </div>
 </html>
-
-
