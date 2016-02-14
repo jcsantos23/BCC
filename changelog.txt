@@ -54,4 +54,6 @@ MM/DD/YY @ HH:MM - Description of change - (Initials)
 02/14/16 @ 13:48 - Modified assembly.php view - (SS)
 02/14/16 @ 14:12 - Modified assembly.php controller - (SS)
 02/14/16 @ 14:38 - Modified Collections.php model - (SS)
+02/14/16 @ 15:30 - Modified Portfolio.php mmodel - (JL)
+02/14/16 @ 15:30 - Modified portfolio.php view - (JL)
 
