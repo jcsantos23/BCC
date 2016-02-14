@@ -9,8 +9,6 @@ class Assembly extends Application {
         $records = $this->collections->all();
 
         foreach ($records as $row) {
-            //echo '<img src="./data/'.$row->Piece.'.jpeg"></img>';
-            //echo $row->Piece;
             $cells[]=$this->parser->parse('cell',(array) $row, true);
         }
 
