@@ -6,27 +6,27 @@ class Assembly extends Application {
 
     public function index() {
 
-        $records = $this->collections->all();
-
-        foreach ($records as $row) {
-            $cells[]=$this->parser->parse('cell',(array) $row, true);
-        }
-
-        //prime the table class
-        $this->load->library('table');
-        $parms = array(
-            'table_open' => '<table class="bot-assembly">',
-            'cell_start' => '<td class="bot-image">',
-            'cell_alt_start' => '<td class="bot-image">'
-        );
-        $this->table->set_template($parms);
-
-        //finally! generate the table
-        $rows = $this->table->make_columns($cells, 3);
-        $this->data['atable'] = $this->table->generate($rows);
-        
         $this->data['pagebody'] = 'assembly';
         $this->render();
+        
+        $card_count = $this->collections->get_cards($this->session->userdata('username'));
+        $card_count = $this->collections->sort_cards($card_count);
+
+	$top_cards = array('Eleven-A' => $card_count['elevena0'],
+                           'Eleven-B' => $card_count['elevenb0'],
+			   'Eleven-C' => $card_count['elevenc0']);
+        
+	$mid_cards = array('Eleven-A' => $card_count['elevena1'],
+   			   'Eleven-B' => $card_count['elevenb1'],
+   		           'Eleven-C' => $card_count['elevenc1']);
+
+	$bot_cards = array('Eleven-A' => $card_count['elevena2'],
+   			   'Eleven-B' => $card_count['elevenb2'],
+   		           'Eleven-C' => $card_count['elevenc2']);
+
+	$this->data['topcards'] = $top_cards;
+	$this->data['midcards'] = $mid_cards;
+	$this->data['botcards'] = $bot_cards;
     }
 
 }
