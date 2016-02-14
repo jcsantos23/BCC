@@ -51,3 +51,12 @@
 	clear: 	both;
 	margin: 20px;	
 }
+
+#login_form{
+        margin: 50px 0px 0px 225px;
+        text-align: center;
+        width: 500px;
+        height: 200px;
+        border-width: 3px;
+        border-color: #98AFC7;
+}

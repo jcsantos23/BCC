@@ -33,6 +33,17 @@ MM/DD/YY @ HH:MM - Description of change - (Initials)
 02/12/16 @ 16:16 - Created Series.php model - (JL)
 02/12/16 @ 16:17 - Created Transactions.php model - (JL)
 
+02/12/16 @ 17:15 - Created login.php controller - (SS)
+02/12/16 @ 17:22 - Created login.php view - (SS)
+02/12/16 @ 17:34 - Modified template.php - (SS)
+02/12/16 @ 18:43 - Modified login.php controller to hold session variables - (SS)
+02/12/16 @ 18:45 - Modified autoload.php libraries - (SS)
+02/12/16 @ 18:58 - Created home_view.php view - (SS)
+
+02/13/16 @ 12:45 - Modified css - (SS)
+02/13/16 @ 13:03 - Modified login.php view - (SS)
+02/13/16 @ 13:46 - Modified login.php controller - (SS)
+
 02/13/16 @ 12:14 - Removed Codes.php model (not needed) - (CS)
 02/13/16 @ 12:15 - Fixed model parameters - (CS)
 02/13/16 @ 12:22 - Modified autoload.php to autoload previously created models - (CS)
