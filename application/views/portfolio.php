@@ -12,7 +12,6 @@
 <div class="alone"></div>
 <div class="left-panel">
     <label for="recent-act">Player's Recent Activity</label>
-    {ptable}
     <table class="table">
             <tr>
                 <th>DateTime</th>
@@ -53,6 +52,7 @@
                 <td class="holdings"><img src="/data/11b-1.jpeg" title="11b-1"/> <br /><?php echo $cards['elevenb1']; ?></td>
                 <td class="holdings"><img src="/data/11b-2.jpeg" title="11b-2"/> <br /><?php echo $cards['elevenb2']; ?></td>
             </tr>
+            
             <tr>
                 <td>11c</td>
                 <td class="holdings"><img src="/data/11c-0.jpeg" title="11c-0"/> <br /><?php echo $cards['elevenc0']; ?></td>
