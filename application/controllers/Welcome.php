@@ -19,7 +19,7 @@ class Welcome extends Application {
         $botseries11 = 0;
         $botseries13 = 0;
         $botseries26 = 0;
-        $records = $this->collections->all();
+        $records = $this->Collections->all();
         foreach ($records as $row) {
             if (strpos($row->Piece, '11') !== false) {
                 $botseries11++;
@@ -44,7 +44,7 @@ class Welcome extends Application {
         $botseries13 = 0;
         $botseries26 = 0;
         $randbot = 0;
-        $records = $this->transactions->all();
+        $records = $this->Transactions->all();
         foreach ($records as $row) {
             if ($row->Series == '11') {
                 $botseries11++;
@@ -69,7 +69,7 @@ class Welcome extends Application {
 
     //Creates Player's gameplay summary
     function createPlayerSummary() {
-        $records = $this->players->all();
+        $records = $this->Players->all();
 
         //prime the table class
         $this->load->library('table');
@@ -80,7 +80,7 @@ class Welcome extends Application {
         );
 
         $this->table->set_template($parms);
-        $this->table->set_heading('Player', 'Cash');
+        $this->table->set_heading('Player', 'Peanuts');
 
         foreach ($records as $row) {
             $this->table->add_row($row->Player, $row->Peanuts);

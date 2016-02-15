@@ -16,4 +16,11 @@ class Players extends MY_Model{
         //parameter: 'tableName','orderByTableColumn
         parent::__construct('players','Player');
     }
+    
+    // add an item to an order
+    function getPlayer(){
+        $query = $this->db->query('SELECT Player FROM players');
+      
+        return $query->result_array();
+    }
 }

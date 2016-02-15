@@ -11,9 +11,16 @@
  *
  * @author JL
  */
-class Transactions extends MY_Model{
+class Transactions extends MY_Model2{
     function __construct() {
         //parameter: 'tableName','orderByTableColumn
-        parent::__construct('transactions','Player');
+        parent::__construct('transactions', 'DateTime','Player');
+    }
+    
+    // add an item to an order
+    function getTrans($player) {
+        $query = $this->db->query('SELECT Player, DateTime, Series, Trans FROM transactions WHERE Player = "' . $player . '"');
+
+        return $query->result_array();
     }
 }
