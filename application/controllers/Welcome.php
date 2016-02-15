@@ -80,7 +80,7 @@ class Welcome extends Application {
         );
 
         $this->table->set_template($parms);
-        $this->table->set_heading('Player', 'Equity', 'Cash');
+        $this->table->set_heading('Player', 'Cash');
 
         foreach ($records as $row) {
             $this->table->add_row($row->Player, $row->Peanuts);
