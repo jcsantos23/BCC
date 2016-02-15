@@ -7,10 +7,10 @@ class Assembly extends Application {
     public function index() {
 
         $this->data['pagebody'] = 'assembly';
-        $this->render();
         
-        $card_count = $this->collections->get_cards($this->session->userdata('username'));
-        $card_count = $this->collections->sort_cards($card_count);
+        
+        $card_count = $this->Collections->get_cards($this->session->userdata('username'));
+        $card_count = $this->Collections->sort_cards($card_count);
 
 	$top_cards = array('Eleven-A' => $card_count['elevena0'],
                            'Eleven-B' => $card_count['elevenb0'],
@@ -27,6 +27,8 @@ class Assembly extends Application {
 	$this->data['topcards'] = $top_cards;
 	$this->data['midcards'] = $mid_cards;
 	$this->data['botcards'] = $bot_cards;
+        
+        $this->render();
     }
 
 }
