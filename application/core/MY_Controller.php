@@ -26,12 +26,21 @@ class Application extends CI_Controller {
      * Render this page
      */
     function render() {
-        //$this->data['menubar'] = build_menu_bar($this->choices);
+        
+        
+        $cred = $this->session->userdata['username'];
+        if ($cred !== '') {
+            $this->data['username'] = $this->session->userdata['username'];
+            $this->data['credential'] = $this->parser->parse('signout', $this->data, true);
+        } else {
+            $this->data['credential'] = $this->parser->parse('signin', $this->data, true);
+        }
+        $this->data['username'] = $this->session->userdata['username'];
+        
+        $this->data['menubar'] = build_menu_bar($this->choices);
         $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
         $this->data['data'] = &$this->data;
         $this->parser->parse('template', $this->data);
-        
-        $this->data['username'] = $this->session->userdata('username');
     }
 
 }
