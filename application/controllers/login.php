@@ -8,10 +8,17 @@ class login extends Application {
         parent::__construct();
     }
     
-    public function index() {
+    function login() {
         $this->data['pagebody'] = 'login';
-        $this->session->set_userdata('username','Mickey');
-        $this->data['username'] = $this->session->userdata('username');
+        $credential = $this->input->post('username');
+        $this->session->set_userdata('username', $credential);
+        $this->data['username'] = $credential;
+        $this->render();
+    }
+
+    function logout() {
+        $this->data['pagebody'] = 'login';
+        $this->session->set_userdata('username', '');
         $this->render();
     }
 
