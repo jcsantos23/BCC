@@ -1,58 +1,58 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
-
+/**
+ * Portfolio page. Show a table of all the author pictures. Clicking on one should show their quote.
+ * Our quotes model has been autoloaded, because we use it everywhere.
+ * 
+ * ------------------------------------------------------------------------
+ */
 class Portfolio extends Application {
 
-    public function index() {
+    function __construct() {
+        parent::__construct();
+    }
+
+    //-------------------------------------------------------------
+    //  The normal pages
+    //------------------------------------------------------------
+
+    function index($user = null) {
+        $this->data['pagebody'] = 'portfolio'; // this is the view we want shown
         
-        $records = $this->transactions->all();
-        if (isset($_POST['formSubmit'])) {
-            $varName = $_POST['pname'];
+        if ($user == null) {
+            $user = $this->session->userdata('username');
         }
-        //prime the table class
-        $this->load->library('table');
-        $parms = array(
-            'table_open' => '<table class="table-right-game">',
-            'cell_start' => '<td class="player">',
-            'cell_alt_start' => '<td class="player">'
-        );
         
-        $this->table->set_template($parms);
-        $this->table->set_heading('DateTime', 'Player', 'Series', 'Transaction');
+        //Trading Activities
+        $transaction = $this->Transactions->getTrans($user);
+        $trans = array();
 
-        foreach ($records as $row) {
-            //if ($activityPlayer == $playerName) {
-                $this->table->add_row($row->DateTime, $row->Player, $row->Series, $row->Trans);
-            //}
-            //else {
-                //$this->table->add_row($row->A, $row->B, $row->C, $row->D);
-            //}
+        foreach ($transaction as $record) {
+            $trans[] = $record;
         }
-        $this->data['ptable'] = $this->table->generate();
+        $this->data['transactions'] = $trans;
+        //$this->data['debug'] = print_r($query->result_array(), true); 
 
-        
-        $recordsCollections = $this->collections->all();
-                
-        //prime the table class
-        $this->load->library('table'); 
-        $parms2 = array(
-            'table_open' => '<table class="table-right-game">',
-            'cell_start' => '<td class="player">',
-            'cell_alt_start' => '<td class="player">'
-        );
-        
-        $this->table->set_template($parms2);
-        $this->table->set_heading('Piece', 'Player', 'DateTime');
+        //Holdings
+        $card_count = $this->Collections->get_cards($user);
+        $card_counts = $this->Collections->sort_cards($card_count);
+        $this->data['cards'] = $card_counts;
 
-        foreach ($recordsCollections as $row) {
-            $this->table->add_row($row->Piece, $row->Player, $row->Datetime);
+        //Dropdown select player
+        $players = $this->Players->getPlayer();
+        $p = array();
+        foreach ($players as $player) {
+            $p[$player['Player']] = $player['Player'];
         }
-
-        //finally! generate the table
-        //$rows = $this->table->make_columns($cells, 3);
-        $this->data['ptable2'] = $this->table->generate();        
-        $this->data['pagebody'] = 'portfolio';
+        //Parse selected player to the url and redirect it
+        $js = 'id="players" onChange="select_player(this);"';
+        $this->data['players'] = form_dropdown('players', $p, $user,$js);
+        
+        
+        //Pass these on to the view
+        
         $this->render();
     }
+
+
 }
