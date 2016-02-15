@@ -57,6 +57,8 @@ function endsWith($string, $ending)
  * Assumption: that the URL helper has been loaded.
  * @param type $choices Array of name=>link pairs
  */
+
+/*
 function build_menu_bar($choices)
 {
     $result = '<ul>';
@@ -64,6 +66,6 @@ function build_menu_bar($choices)
 	$result .= '<li>' . anchor($link, $name) . '</li>';
     $result .= '</ul>';
     return $result;
-}
+}*/
 /* End of file common_helper.php */
 /* Location: application/helpers/common_helper.php */

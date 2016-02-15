@@ -60,3 +60,8 @@
         border-width: 3px;
         border-color: #98AFC7;
 }
+
+.holdings img{
+    height:21px;
+    width:50px;
+}

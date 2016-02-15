@@ -47,6 +47,33 @@ class Collections extends MY_Model {
                     case "11c-2":
                         $card_array["elevenc2"] += 1;
                         break;
+                    case "13c-0":
+                        $card_array["thirteenc0"] += 1;
+                        break;
+                    case "13c-1":
+                        $card_array["thirteenc1"] += 1;
+                        break;
+                    case "13c-2":
+                        $card_array["thirteenc2"] += 1;
+                        break;
+                    case "13d-0":
+                        $card_array["thirteend0"] += 1;
+                        break;
+                    case "13d-1":
+                        $card_array["thirteend1"] += 1;
+                        break;
+                    case "13d-2":
+                        $card_array["thirteend2"] += 1;
+                        break;
+                    case "26h-0":
+                        $card_array["twentysixh0"] += 1;
+                        break;
+                    case "26h-1":
+                        $card_array["twentysixh1"] += 1;
+                        break;
+                    case "26h-2":
+                        $card_array["twentysixh2"] += 1;
+                        break;
                 }
             }
             return $card_array;
