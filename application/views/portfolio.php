@@ -1,12 +1,7 @@
 <form method="post">
     <div class="player-select">
-        <label for="player">Player</label>
-        <select name = pname>
-            <option value="player1">Mickey</option>
-            <option value="player2">Donald</option> 
-            <option value="player3">George</option>
-            <option value="player4">Henry</option>
-        </select>
+        <label for="player">Player Selection</label>
+        {players}
     </div>
 </form> 
 <div class="alone"></div>
