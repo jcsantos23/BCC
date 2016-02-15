@@ -57,3 +57,5 @@ MM/DD/YY @ HH:MM - Description of change - (Initials)
 02/14/16 @ 15:30 - Modified Portfolio.php mmodel - (JL)
 02/14/16 @ 15:30 - Modified portfolio.php view - (JL)
 02/14/16 @ 22:27 - Modified login.php view - (JL)
+
+02/15/16 @ 14:40 - Modified login.php view/controller for Mickey default - (SS)
