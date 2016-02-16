@@ -11,9 +11,9 @@
  *
  * @author JL
  */
+//constructor
 class Series extends MY_Model{
     function __construct() {
-        //parameter: 'tableName','orderByTableColumn
         parent::__construct('series','Series');
     }
 }

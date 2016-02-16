@@ -1,8 +1,7 @@
 <?php
 
 /**
- * Portfolio page. Show a table of all the author pictures. Clicking on one should show their quote.
- * Our quotes model has been autoloaded, because we use it everywhere.
+ * Portfolio page. Shows two tables with user trading actvity and current holdings.
  * 
  * ------------------------------------------------------------------------
  */
@@ -12,12 +11,8 @@ class Portfolio extends Application {
         parent::__construct();
     }
 
-    //-------------------------------------------------------------
-    //  The normal pages
-    //------------------------------------------------------------
-
     function index($user = null) {
-        $this->data['pagebody'] = 'portfolio'; // this is the view we want shown
+        $this->data['pagebody'] = 'portfolio'; //tells it it show this view
         
         if ($user == null) {
             $user = $this->session->userdata('username');
@@ -31,28 +26,23 @@ class Portfolio extends Application {
             $trans[] = $record;
         }
         $this->data['transactions'] = $trans;
-        //$this->data['debug'] = print_r($query->result_array(), true); 
 
-        //Holdings
-        $card_count = $this->Collections->get_cards($user);
-        $card_counts = $this->Collections->sort_cards($card_count);
-        $this->data['cards'] = $card_counts;
+        //Current Holdings
+        $cardcount = $this->Collections->get_cards($user);
+        $cardcounts = $this->Collections->sort_cards($cardcount);
+        $this->data['cards'] = $cardcounts;
 
-        //Dropdown select player
+        //Dropdown list populated for player selection
         $players = $this->Players->getPlayer();
-        $p = array();
+        $x = array();
         foreach ($players as $player) {
-            $p[$player['Player']] = $player['Player'];
+            $x[$player['Player']] = $player['Player'];
         }
-        //Parse selected player to the url and redirect it
+        //Parse selected player to a url and redirect it to show info accordingly
         $js = 'id="players" onChange="select_player(this);"';
-        $this->data['players'] = form_dropdown('players', $p, $user,$js);
+        $this->data['players'] = form_dropdown('players', $x, $user,$js);
         
-        
-        //Pass these on to the view
-        
+        //Pass these on to the view        
         $this->render();
     }
-
-
 }

@@ -1,23 +1,25 @@
 <?php
-
+/**
+ * Assembly page to assemble the bot.
+ * 
+ * ------------------------------------------------------------------------
+ */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Assembly extends Application {
     
-    function __construct()
-	{
+    function __construct(){
 		parent::__construct();
 	}
 
     public function index() {
-
         $this->data['pagebody'] = 'assembly';
         
-        // gets the cards that the user owns
+        //gets which cards the player has
         $card_count = $this->Collections->get_cards($this->session->userdata('username'));
         $card_count = $this->Collections->sort_cards($card_count);
 
-        // gets how many cards the user owns
+        //counts the amount of cards of each type the player has
 	$top_cards = array('11a-' => $card_count['elevena0'],
                            '11b-' => $card_count['elevenb0'],
 			   '11c-' => $card_count['elevenc0'],
@@ -39,10 +41,12 @@ class Assembly extends Application {
                            '13d-' => $card_count['thirteend2'],
                            '26h-' => $card_count['twentysixh2']);
 
+        //displays data back out
 	$this->data['topcards'] = $top_cards;
 	$this->data['midcards'] = $mid_cards;
 	$this->data['botcards'] = $bot_cards;
         
+        //puts it into the view
         $this->render();
     }
 
