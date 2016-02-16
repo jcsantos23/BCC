@@ -1,10 +1,14 @@
+<!-- dropdownlist to select players -->
 <form method="post">
     <div class="player-select">
         <label for="player">Player Selection</label>
         {players}
     </div>
 </form> 
+
 <div class="alone"></div>
+
+<!-- displays the transactions for the player select -->
 <div>
     <table>
         <tr>
@@ -27,8 +31,8 @@
         </tr>
         {/transactions}
     </table>
-   
 
+    <!-- displays the amount of pieces owned for each bot -->
     <table class="ch">
         <tr>
             <th>Current Holdings</th>
@@ -79,7 +83,5 @@
             <td class="holdings"><img src="/data/26h-2.jpeg" title="26h-2"/> <br /><?php echo $cards['twentysixh2']; ?></td>
         </tr>
     </table>
-
-
 </div>
 

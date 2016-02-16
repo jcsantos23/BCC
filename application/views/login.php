@@ -1,0 +1,1 @@
+<!-- placeholder page for login/logout to work properly -->
