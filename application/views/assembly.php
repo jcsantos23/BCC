@@ -1,5 +1,5 @@
 <div id="select_bots">
-    <p class='portfolioTitle'> Bot Builder Page</p>
+    <p class='portfolioTitle'> Bot the Builder! Can you build it?</p>
     <select name="Top Pieces" onchange="load_top_image(this);">
         <option value=0>Top Piece</option>
         <?php
@@ -13,7 +13,6 @@
         }
         ?>
     </select>
-    <br /><br /><br /><br /><br />
     <select name="Middle Pieces" onchange="load_mid_image(this);">
         <option value=0>Middle Piece</option>
         <?php
@@ -27,7 +26,6 @@
         }
         ?>
     </select>
-    <br /><br /><br /><br /><br />
     <select name="Bottom Pieces" onchange="load_bot_image(this);">
         <option value=0>Bottom Piece</option>
         <?php
@@ -41,7 +39,6 @@
         }
         ?>
     </select>
-    <br /><br /><br /><br /><br />
     <button type="button">Assemble</button>
 </div>
 

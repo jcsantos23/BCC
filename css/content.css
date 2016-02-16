@@ -3,10 +3,7 @@
 }
 
 .left-panel {
-    border-style: ridge;
-    border-color: #98AFC7;
-    float: left;
-    width: 48%;
+    
 }
 
 .summary {
@@ -16,10 +13,7 @@
 }
 
 .right-panel {
-    border-style: ridge;
-    border-color: #98AFC7;
-    float: right;
-    width: 48%;	
+    
 
 }
 .right-top{
