@@ -1,2 +1,65 @@
 Template
 MM/DD/YY @ HH:MM - Description of change - (Initials)
+
+-------------------------------------------------------------------
+
+02/04/16 @ 14:43 - Added CodeIgniter Framework - (CS)
+
+02/07/16 @ 13:00 - Added mock up Home/Portfolio/Assembly html files - (CS)
+02/07/16 @ 13:00 - Added css files - (CS)
+
+02/09/16 @ 14:00 - Created common_helper file - (CS)
+02/09/16 @ 14:00 - Added .htaccess file - (CS)
+02/09/16 @ 14:00 - Modified autoload file - (CS)
+02/09/16 @ 14:00 - Fixed system3 path - (CS)
+02/09/16 @ 14:00 - Created Welcome/Portfolio/Assembly Controllers - (CS)
+02/09/16 @ 14:00 - Converted html files to welcome/portfolio/assembly php files - (CS)
+02/09/16 @ 14:00 - Set up a template master view - (CS)
+02/09/16 @ 14:00 - Created MY_Controller inside core folder - (CS)
+
+02/09/16 @ 14:00 - Created Collections model - (CS)
+
+02/11/16 @ 14:13 - Database.php phpmyadmin config, autoload.php libraries (KLW)
+02/11/16 @ 14:39 - GIT ignored personal database.php... (KLW)
+02/11/16 @ 14:39 - Added MY_Model.php from jedi-academy/starter-jimsjoint (CS)
+02/11/16 @ 14:39 - Modified autoload.php, Collections.php, Assembly.php (CS)
+02/11/16 @ 17:33 - Added data folder containing bot images (CS)
+02/11/16 @ 19:58 - Created cell.php to handle images (CS)
+02/11/16 @ 20:20 - Modified Assembly controller and assembly view (CS)
+02/11/16 @ 20:22 - Modified css to make img responsive (CS)
+
+02/12/16 @ 16:15 - Created Codes.php model - (JL)
+02/12/16 @ 16:16 - Created Players.php model - (JL)
+02/12/16 @ 16:16 - Created Series.php model - (JL)
+02/12/16 @ 16:17 - Created Transactions.php model - (JL)
+
+02/12/16 @ 17:15 - Created login.php controller - (SS)
+02/12/16 @ 17:22 - Created login.php view - (SS)
+02/12/16 @ 17:34 - Modified template.php - (SS)
+02/12/16 @ 18:43 - Modified login.php controller to hold session variables - (SS)
+02/12/16 @ 18:45 - Modified autoload.php libraries - (SS)
+02/12/16 @ 18:58 - Created home_view.php view - (SS)
+
+02/13/16 @ 12:45 - Modified css - (SS)
+02/13/16 @ 13:03 - Modified login.php view - (SS)
+02/13/16 @ 13:46 - Modified login.php controller - (SS)
+
+02/13/16 @ 12:14 - Removed Codes.php model (not needed) - (CS)
+02/13/16 @ 12:15 - Fixed model parameters - (CS)
+02/13/16 @ 12:22 - Modified autoload.php to autoload previously created models - (CS)
+02/13/16 @ 12:25 - Modified ln28 in Assembly.php controller - (CS)
+02/13/16 @ 13:32 - Modified welcome.php view - (CS)
+02/13/16 @ 13:43 - Modified Collection.php model - (CS)
+
+02/14/16 @ 13:48 - Modified assembly.php view - (SS)
+02/14/16 @ 14:12 - Modified assembly.php controller - (SS)
+02/14/16 @ 14:38 - Modified Collections.php model - (SS)
+02/14/16 @ 15:30 - Modified Portfolio.php mmodel - (JL)
+02/14/16 @ 15:30 - Modified portfolio.php view - (JL)
+02/14/16 @ 22:27 - Modified login.php view - (JL)
+
+02/15/16 @ 14:40 - Modified login.php view/controller - (SS)
+02/15/16 @ 15:02 - Modified portfolio view/controller to show proper selections - (JL)
+02/15/16 @ 16:05 - Modified assembly view/controller to show proper selections - (JL, SS)
+02/15/16 @ 17:48 - Modified welcome view/controller to show game summary - (JL)
+02/15/16 @ 18:58 - Modified CSS files for better visuals - (JL, SS)

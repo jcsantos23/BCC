@@ -1,0 +1,93 @@
+#wrapper {
+	max-width: 960px;
+	margin:4px auto;
+	margin-top:1em;
+	padding:1em;
+	padding-right:8px;
+
+	box-shadow:0 0 5px 5px black;
+	color: black;
+}
+
+#header {
+	display: block;
+	background-color: #98AFC7;
+}
+
+.myhead {
+	color:#25383C;
+	font-size:40px;
+	padding:0px;
+	margin:10px;
+	font-weight:bold;
+}
+
+.nav {
+	float: right;
+}
+
+.nav ul {
+	list-style-type: none;
+}
+
+.nav ul li {
+	float: left;
+	list-style-type: none;
+	margin-right: 10px;
+}
+
+.nav a {
+	color: #25383C;
+	padding: 8px 16px 8px 16px;
+	text-decoration:none;	
+}
+
+.nav a:hover, a:active {
+	background-color:#659EC7;
+	color: white;
+}
+
+.alone{
+	clear: 	both;
+	margin: 20px;	
+}
+
+#login_form{
+        margin: 50px 0px 0px 225px;
+        text-align: center;
+        width: 500px;
+        height: 200px;
+        border-width: 3px;
+        border-color: #98AFC7;
+}
+
+.holdings img{
+    height:32px;
+    width:75px;
+}
+
+#assemble_images {
+    float: left;
+    width: 100px;
+}
+
+.table{
+    text-align: center;
+    border-style: ridge;
+    border-color: #98AFC7;
+    float: left;
+    width: 48%;	
+}
+
+.pictures{
+    text-align: center;
+    border-style: ridge;
+    border-color: #98AFC7;
+    float: right;
+    width: 48%;
+}
+
+.ch {
+    padding-left: 40px;
+}
+
