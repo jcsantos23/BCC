@@ -61,10 +61,15 @@ class Welcome extends Application {
         $parms = array(
             'table_open' => '<table class="right-bot">', 'cell_start' => '<td class="player">', 'cell_alt_start' => '<td class="player">');
         $this->table->set_template($parms);
-        $this->table->set_heading('Series 11', 'Series 13', 'Series 26', 'Random Series');
-        $this->table->add_row('Sold', 'Bought', 'Sold', 'Bought','Sold', 'Bought');
-        $this->table->add_row($botseries11, $botseries13, $botseries26);
+        $this->table->set_heading('Game Status: ACTIVE');
+        $this->table->add_row('');
+        $this->table->add_row('Game Summary - Known Bots:');
+        $this->table->add_row('');
+        $this->table->add_row('Series 11: Basic House Bot (20 Peanuts)');
+        $this->table->add_row('Series 13: Advanced House Bot (50 Peanuts)');
+        $this->table->add_row('Series 26: Supreme Omega Overlord House Bot (200 Peanuts)');
         $this->data['bot'] = $this->table->generate();
+        
     }
 
     //Creates Player's gameplay summary
@@ -80,7 +85,7 @@ class Welcome extends Application {
         );
 
         $this->table->set_template($parms);
-        $this->table->set_heading('Player', 'Peanuts');
+        $this->table->set_heading('Player', 'Peanuts', 'Equity');
 
         foreach ($records as $row) {
             $this->table->add_row($row->Player, $row->Peanuts);
@@ -88,6 +93,8 @@ class Welcome extends Application {
 
         //Generate the table
         $this->data['wtable'] = $this->table->generate();
+        
+        
     }
 
 }

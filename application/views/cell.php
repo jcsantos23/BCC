@@ -1,1 +1,0 @@
-<img src="./data/{Piece}.jpeg"></img>

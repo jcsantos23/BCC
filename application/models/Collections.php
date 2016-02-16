@@ -83,5 +83,4 @@ class Collections extends MY_Model {
             return $card_array;
         }
     }
-
 }

@@ -65,3 +65,29 @@
     height:32px;
     width:75px;
 }
+
+#assemble_images {
+    float: left;
+    width: 100px;
+}
+
+.table{
+    text-align: center;
+    border-style: ridge;
+    border-color: #98AFC7;
+    float: left;
+    width: 48%;	
+}
+
+.pictures{
+    text-align: center;
+    border-style: ridge;
+    border-color: #98AFC7;
+    float: right;
+    width: 48%;
+}
+
+.ch {
+    padding-left: 40px;
+}
+
