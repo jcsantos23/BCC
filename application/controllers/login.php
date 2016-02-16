@@ -8,6 +8,7 @@ class login extends Application {
         parent::__construct();
     }
     
+    //login function for storing session log in name
     function login() {
         $this->data['pagebody'] = 'login';
         $credential = $this->input->post('username');
@@ -16,6 +17,7 @@ class login extends Application {
         $this->render();
     }
 
+    //logout function to reset session
     function logout() {
         $this->data['pagebody'] = 'login';
         $this->session->set_userdata('username', '');

@@ -13,11 +13,11 @@
  */
 class Transactions extends MY_Model2{
     function __construct() {
-        //parameter: 'tableName','orderByTableColumn
+        //constructor
         parent::__construct('transactions', 'DateTime','Player');
     }
     
-    // add an item to an order
+    //gets the transaction history of the players
     function getTrans($player) {
         $query = $this->db->query('SELECT Player, DateTime, Series, Trans FROM transactions WHERE Player = "' . $player . '"');
 
