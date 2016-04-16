@@ -46,8 +46,13 @@ class Application extends CI_Controller {
         $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
 
         if (!empty($this->session->userdata('username'))) {
-            $this->data['navigation'] = $this->parser->parse('navigation_user', array(), true);
-            $this->logout();
+            if ($this->session->userdata('role') == 99) {
+                $this->data['navigation'] = $this->parser->parse('navigation_admin', array(), true);
+                $this->logout();
+            } else {
+                $this->data['navigation'] = $this->parser->parse('navigation_user', array(), true);
+                $this->logout();
+            }
         } else {
             $this->data['navigation'] = $this->parser->parse('navigation_def', array(), true);
         }
