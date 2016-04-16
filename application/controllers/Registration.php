@@ -33,7 +33,13 @@ class Registration extends Application {
                 } else {
                     $data = array(
                         'Player' => $this->input->post('username'),
-                        'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT)
+                        'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+                        
+                        //set Peanuts value initially to 0
+                        'Peanuts' => "0",
+                        
+                        //set the default role to regular player which is 0
+                        'role' => "0"
                     );
                     $this->Players->add($data);
 
