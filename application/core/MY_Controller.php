@@ -44,14 +44,24 @@ class Application extends CI_Controller {
         }
 
         $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
-        
+
         if (!empty($this->session->userdata('username'))) {
             $this->data['navigation'] = $this->parser->parse('navigation_user', array(), true);
+            $this->logout();
         } else {
             $this->data['navigation'] = $this->parser->parse('navigation_def', array(), true);
         }
         $this->data['data'] = &$this->data;
         $this->parser->parse('template', $this->data);
+    }
+
+    function logout() {
+
+        //Logout button onClick
+        if (!is_null($this->input->post('logout'))) {
+            $this->session->sess_destroy();
+            redirect('');
+        }
     }
 
 }
