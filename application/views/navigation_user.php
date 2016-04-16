@@ -8,7 +8,11 @@
             <li><a href="/">Home</a></li>
             <li><a href="/portfolio">Portfolio</a></li>
             <li><a href="/assembly">Assembly</a></li>
-            <li><a href="/welcome/logout">Logout</a></li>
+            <li>
+                <form method="post">
+                    <input type="submit" name="logout" value="Logout"/>
+                </form>
+            </li>
         </ul>
     </span>
 </div>
