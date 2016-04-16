@@ -17,7 +17,8 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/portfolio">Portfolio</a></li>
                         <li><a href="/assembly">Assembly</a></li>
-                        <li>{credential}</li>
+                        <li><a href="/signin">Login</a></li>
+                        
                     </ul>
                 </span>
             </div>
