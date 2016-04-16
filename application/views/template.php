@@ -9,8 +9,19 @@
     </head>
     <body>
         <div id="wrapper">
-            {navigation}
-            <div class="alone">{display}</div>
+            <div id="header">
+                <!-- navigation menu -->
+                <span class="myhead">Bot Card Collector</span>
+                <span class="nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/assembly">Assembly</a></li>
+                        <li>{credential}</li>
+                    </ul>
+                </span>
+            </div>
+            <div class="alone"></div>
             <!-- populates the body with content -->
             <div id="content">
                 {content}
