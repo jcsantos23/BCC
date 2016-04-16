@@ -9,6 +9,7 @@
             <li><a href="/portfolio">Portfolio</a></li>
             <li><a href="/assembly">Assembly</a></li>
             <li><a href="/login">Login</a></li>
+            <li><a href="/registration">Sign-up</a></li>
         </ul>
     </span>
 </div>
