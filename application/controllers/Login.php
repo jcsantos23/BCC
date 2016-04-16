@@ -48,6 +48,7 @@ class Login extends Application {
                     if ($valid) {
                         $this->session->username = $username;
                         $this->session->response = "Login successful! Welcome, " . $username;
+                        redirect('');
                     } else {
                         $this->session->response = "Wrong password. Try again";
                     }
