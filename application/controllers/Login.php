@@ -46,6 +46,7 @@ class Login extends Application {
 
                     //When the password is validated
                     if ($valid) {
+                        $this->session->role = $exist->role;
                         $this->session->username = $username;
                         $this->session->response = "Login successful! Welcome, " . $username;
                         redirect('');
