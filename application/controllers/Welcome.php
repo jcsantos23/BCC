@@ -49,8 +49,6 @@ class Welcome extends Application {
 
         //Generate the table
         $this->data['wtable'] = $this->table->generate();
-        
-        
     }
 
 }
