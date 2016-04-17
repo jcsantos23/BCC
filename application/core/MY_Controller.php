@@ -10,7 +10,7 @@ class Application extends CI_Controller {
     protected $data = array();      // parameters for view components
     protected $id;    // identifier for our content
     protected $choices = array(// our menu navbar
-        'Home' => '/', 'Portfolio' => '/portfolio', 'Assembly' => '/assembly');
+        'Home' => '/', 'Portfolio' => '/portfolio', 'Assembly' => '/assembly', 'Login' => '/signin');
 
     /**
      * Constructor.
@@ -20,6 +20,8 @@ class Application extends CI_Controller {
         parent::__construct();
         $this->data = array();
         $this->data['pagetitle'] = 'Bot Card Collector';
+        $this->errors = array();
+        $this->data['pageTitle'] = 'welcome';
     }
 
     /**
