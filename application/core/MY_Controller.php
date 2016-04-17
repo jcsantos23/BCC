@@ -26,21 +26,34 @@ class Application extends CI_Controller {
      * Render this page
      */
     function render() {
-        
-        
-        $cred = $this->session->userdata['username'];
-        if ($cred !== '') {
-            $this->data['username'] = $this->session->userdata['username'];
-            $this->data['credential'] = $this->parser->parse('signout', $this->data, true);
-        } else {
-            $this->data['credential'] = $this->parser->parse('signin', $this->data, true);
+
+        $this->data['display'] = "";
+        if (!empty($this->session->userdata('response'))) {
+            $this->data['display'] = $this->session->userdata('response');
+            $this->session->unset_userdata('response');
         }
-        $this->data['username'] = $this->session->userdata['username'];
-        
-        //$this->data['menubar'] = build_menu_bar($this->choices);
         $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
+        if (!empty($this->session->userdata('username'))) {
+            if ($this->session->userdata('role') == 99) {
+                $this->data['navigation'] = $this->parser->parse('navigation_admin', array(), true);
+                $this->logout();
+            } else {
+                $this->data['navigation'] = $this->parser->parse('navigation_user', array(), true);
+                $this->logout();
+            }
+        } else {
+            $this->data['navigation'] = $this->parser->parse('navigation_def', array(), true);
+        }
         $this->data['data'] = &$this->data;
         $this->parser->parse('template', $this->data);
+    }
+
+    function logout() {
+        //Logout button onClick
+        if (!is_null($this->input->post('logout'))) {
+            $this->session->sess_destroy();
+            redirect('');
+        }
     }
 
 }
